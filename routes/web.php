@@ -17,3 +17,5 @@ Route::resource('portfolio', 'IndexController',['parametres'=>[
     'post'=>'id'
 ]
 ]);
+
+Route::resource('message_add', 'MessageController')->only(['store']);
