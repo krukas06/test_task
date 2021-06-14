@@ -11,6 +11,9 @@
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+Route::get('/', 'IndexController@list_portfolio');
+
+Route::resource('portfolio', 'IndexController',['parametres'=>[
+    'post'=>'id'
+]
+]);
